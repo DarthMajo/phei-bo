@@ -1,9 +1,18 @@
-from PyQt5.QtWidgets import QApplication, QWidget
+"""Phei-bo is a project that will simulate trade on a virtual world."""
+
+# Python Imports
 import sys
 
-pheibo = QApplication(sys.argv)
+# pip Imports
+from PyQt5.QtWidgets import QApplication, QWidget
 
-window = QWidget()
-window.show()
+# Project Imports
+from windows.mainwindow import MainWindow
 
-pheibo.exec()
+if __name__ == '__main__':
+    pheibo = QApplication(sys.argv)
+
+    window = MainWindow()
+    window.show()
+
+    pheibo.exec()
